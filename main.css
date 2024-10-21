@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Universal Css Property */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body html Css Property */
+body,
+html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+/* Main Content */
+body {
+    margin: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: #538DD7;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Nav List Css Property */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Prevents overflow for smaller screens */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+/* Hover Effect On Navigation Button  */
+nav ul li a:hover {
+    color: #000;
+    background-color: #F0F1F3;
+    border-radius: 5px;
+}
+
+/* Css Property For All Section */
+.section {
+    padding: 60px 20px;
+    margin-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Css For about Section */
+#about {
+    background: #F0F1F3;
+}
+
+/* Background for services */
+#services {
+    background: #F0F1F3;
+}
+
+/* Css For Services Section */
+.services-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Adjust for smaller screens */
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    max-width: 90%;
+    /* For smaller screens */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Css For Contact Section */
+#contact {
+    background: #F0F1F3;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    color: #000;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #538DD7;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #538DD7;
+    outline: none;
+}
+
+.btn-submit {
+    background: #538DD7;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #367bd4;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    /* Pushes the footer to the bottom when content is short */
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 0.1em;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        /* Add spacing between each link */
+    }
+
+    .section {
+        padding: 2rem 1rem;
+        /* Adjust section padding for smaller screens */
+    }
+}
+
+
+/* Media Queries for Responsive Design of services*/
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 90%;
+        /* Ensures proper width on smaller screens */
+    }
+}
+
+/* Responsive Design of Contact*/
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+}
